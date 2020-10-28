@@ -1,0 +1,56 @@
+standardDT = read_file('기준정보.xlsx');
+input = read_file('전산팀엑셀파일.xlsx');
+
+creditSubTotalDT = input.get('sheet1');
+subjectsListDT = input.get('sheet2');
+prevUniCreditDT = input.get('sheet3');
+// sheet1: 학생별 항목별 이수학점, sheet2: 학생별 전체 이수 교과목, sheet3: 전적대 이수학점
+List = [];
+subjectsListDT.deleteRow().Select('학점==R'); // 재수강 과목 row를 DT에서 삭제
+
+for student in creditSubTotalDT { 
+    isTransferredBLN = False;
+    classYearINT = null;
+    isFulfilledJSON = {
+        '학번':'',
+        '공통교양':'이수', 
+        '핵심교양':'이수', 
+        '학문기초':'이수', 
+        '일반교양':'이수',
+        '교양총학점':'이수',
+        '전공': '이수', 
+        '복수전공': '이수',
+        '졸업가능여부': '',
+        '졸업불가사유': []
+        }
+
+    if (student.Column('학생구분')=='편입생') {
+        isTransferredBLN = True;
+        // for 입학연도 in 기준정보
+        if (student.Column('입학연도') > 2017) {
+            if (student.Column('교양총학점') < 51) {
+                isFulfilledJSON.'교양총학점' = '미이수';
+                isFulfilledJSON.'졸업불가사유'.push('편입생 교양학점 부족');
+            } else {
+                tempDT = subjectsListDT.Select('학번' == student.Column('학번'))
+                validSubjectLST = standardDT.'2017-교양'.Column('분류코드') == 1
+                for subject in validSubjectLST {
+                    if (subject == tempDT.Column('교과코드')) {
+
+                    }
+                }
+                if (tempDT.Column('교과코드').hasValue('') ) {
+                    
+                }
+            }
+        } else {
+            if (student.Column('교양총학점') < 49) {
+                isFulfilledJSON.'교양총학점' = '미이수';
+                isFulfilledJSON.'졸업불가사유'.push('편입생 교양학점 부족');
+            } 
+        }
+    } else {
+
+    }
+    List.push(json)
+}
