@@ -8,9 +8,13 @@ standardDT6 // excel:기준정보 sheet:일반전공
 inputDT1 // excel:졸업사정 대상자 sheet:학생별 이수학점  ==> 여기에도 입학구분 넣을수 있을까?
 inputDT2 // excel:졸업사정 대상자 sheet:학생별 이수과목
 
-prevUniCredDT // excel: 전적대 이수학점 sheet: 각 학과명 ??
+prevUniCredDT? // excel: 전적대 이수학점 sheet: 각 학과명 ??
+---------------------------------------------------------------
+GET TRANSACTION
+(IN: inputDT1, inputDT2 / OUT:전처리 끝낸 inputDT1, inputDT2)
 
 inputDT1에서 중복된 교과코드의 연번들의 짝을 가져와 리스트로 저장 duplicateCodeLIST
+
 inputDT1에서 duplicateCodeLIST와 대조하여 중복된 과목 수만큼 이수학점 뺄셈.
 inputDT2에서 duplicateCodeLIST와 대조하여 중복교과 코드 제거.
 
@@ -18,14 +22,19 @@ inputDT2에서 duplicateCodeLIST와 대조하여 중복교과 코드 제거.
 prevUniCredDT에서 credUnmetDT의 학생들과 같은 학번인 행을 찾아 값을 가져온 후 inputDT1의 각 항목에 더해줌
 
 ------------------------------------------------------------------------------------
-WORKFLOW1 (IN: OUT:)
+WORKFLOW1 - 교양 
+(IN: standardDT1, standardDT2, standardDT3, standardDT4, standardDT5, standardDT6, inputDT1, inputDT2 / OUT: electiveTempDT, studentDIC)
 
-for i in inputDT1 {
+for row in inputDT1 {
 
     if (편입생) {   // inputDT2에서 입학구분 어떻게 결정할까?
         inputDT1에서 입학년도, 입학구분/학과, 복수전공여부 파악하여 
-        standardDT1에서 해당하는 기준정보 row의 index와 그 정보를 Dictionary<String, LIST>에 저장. => {"60161201": [17, 신입학/멀티디자인과, T, 128, ...]}
-
+        standardDT1에서 해당하는 기준정보 row의 index와 그 정보를 studentDIC = new Dictionary<String, LIST>에 저장. 
+        {"60161201": [17, 신입학/멀티디자인과, T, 128, ...]}
+        // ex. studentDIC.Add({row.Column("학번"):row.ConvertToList()})
+        if (dict[3] == 128) {
+            
+        }
     } else {   // 신입생
 
 
@@ -33,7 +42,8 @@ for i in inputDT1 {
 }
 
 ------------------------------------------------------------------------------------
-WORKFLOW2 (IN: OUT:)
+WORKFLOW2 - 전공 
+(IN: standardDT1, standardDT2, standardDT3, standardDT4, standardDT5, standardDT6, inputDT1, inputDT2, studentDIC / OUT: majorTempDT)
 
 for i in inputDT1 {
     if (복수전공) {
@@ -43,4 +53,6 @@ for i in inputDT1 {
     }
 }
 ------------------------------------------------------------------------------------
-WORKFLOW3 - 서머리레포트 (IN: OUT:)
+WORKFLOW3 - 서머리레포트 
+(IN: electiveTempDT, majorTempDT / OUT: )
+
