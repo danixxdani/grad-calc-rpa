@@ -1,10 +1,9 @@
 {
-  "name": "test",
-  "description": "Blank Process",
+  "name": "RoboticEnterpriseFramework",
+  "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
-    "UiPath.Mail.Activities": "[1.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
     "UiPath.UIAutomation.Activities": "[20.10.6]"
   },
@@ -43,7 +42,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "119f518a-3718-4b1b-86a4-005cdb2eeeb1",
+      "uniqueId": "f2ee0182-bbdd-4cf2-824d-2c2f0ac4aa53",
       "input": [],
       "output": []
     }
