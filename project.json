@@ -21,9 +21,7 @@
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow",
-    "readyForPiP": false,
-    "startsInPiP": false
+    "executionType": "Workflow"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -32,11 +30,7 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "processOptions": {
-      "ignoredFiles": []
-    },
-    "fileInfoCollection": [],
-    "modernBehavior": false
+    "fileInfoCollection": []
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
@@ -46,8 +40,5 @@
       "input": [],
       "output": []
     }
-  ],
-  "isTemplate": false,
-  "templateProjectData": {},
-  "publishData": {}
+  ]
 }
