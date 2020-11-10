@@ -427,7 +427,7 @@
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_37">
+              <Sequence DisplayName="Sequencee" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_37">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="Rowidx" />
                 </Sequence.Variables>
