@@ -1,7 +1,7 @@
 {
   "name": "RoboticEnterpriseFramework",
   "description": "Robotic Enterprise Framework",
-  "main": "Main.xaml",
+  "main": "Major.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
@@ -21,7 +21,9 @@
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -30,7 +32,11 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfoCollection": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
@@ -39,6 +45,15 @@
       "uniqueId": "f2ee0182-bbdd-4cf2-824d-2c2f0ac4aa53",
       "input": [],
       "output": []
+    },
+    {
+      "filePath": "Major.xaml",
+      "uniqueId": "70bfe98c-8fc5-4f15-bb39-916b2517f43c",
+      "input": [],
+      "output": []
     }
-  ]
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
 }
