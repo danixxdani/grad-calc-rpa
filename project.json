@@ -1,7 +1,7 @@
 {
   "name": "RoboticEnterpriseFramework",
   "description": "Robotic Enterprise Framework",
-  "main": "Main.xaml",
+  "main": "Elective_FlowChart.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
@@ -43,6 +43,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "f2ee0182-bbdd-4cf2-824d-2c2f0ac4aa53",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Elective_FlowChart.xaml",
+      "uniqueId": "b166638b-250b-4cfc-9d84-e6b7aaaf3f84",
       "input": [],
       "output": []
     }
