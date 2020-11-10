@@ -427,7 +427,7 @@
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Sequencee" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_37">
+              <Sequence DisplayName="전공 졸업 학점 판별" sap:VirtualizedContainerService.HintSize="805,1118" sap2010:WorkflowViewState.IdRef="Sequence_37">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="Rowidx" />
                 </Sequence.Variables>
@@ -456,6 +456,9 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Else>
                             <Sequence sap:VirtualizedContainerService.HintSize="526,566" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="NotGrad_Major" />
+                              </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -479,7 +482,18 @@
                                   <InArgument x:TypeArguments="sd:DataRow">[standardDT1.Rows(stdidx_int)]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If Condition="[convert.ToInt32(row.item(19)) &gt;= convert.ToInt32(standardRow.item(9))]" DisplayName="inputDT1 학점과 standardDT1 학점 비교 후 판별" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_17" />
+                              <If Condition="[convert.ToInt32(row.item(19)) &gt;= convert.ToInt32(standardRow.item(9))]" DisplayName="inputDT1 학점과 standardDT1 학점 비교 후 판별" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_17">
+                                <If.Else>
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[NotGrad_Major]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">전공 학점 미충족</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </If.Else>
+                              </If>
                             </Sequence>
                           </If.Else>
                         </If>
