@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -95,11 +95,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">120,257</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:Size x:Key="ShapeSize">200,68</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">320,290 380,290</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="기준서 파일 호출" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence DisplayName="기준서 파일 호출" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -212,7 +212,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ExcelReadRange>
-                <ui:ExcelReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="out : inputDT2" DataTable="[inputDT2]" DisplayName="Read Range - 학생별 이수과목" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" SheetName="학생별 이수과목">
+                <ui:ExcelReadRange AddHeaders="False" sap2010:Annotation.AnnotationText="out : inputDT2" DataTable="[inputDT2]" DisplayName="Read Range - 학생별 이수과목" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" SheetName="학생별 이수과목">
                   <ui:ExcelReadRange.Range>
                     <InArgument x:TypeArguments="x:String">
                       <Literal x:TypeArguments="x:String" Value="" />
@@ -234,10 +234,10 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">380,257</av:Point>
-              <av:Size x:Key="ShapeSize">200,66</av:Size>
+              <av:Size x:Key="ShapeSize">200,68</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="학번 별 기준파일 인덱스 추출" sap:VirtualizedContainerService.HintSize="1498,5993" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence DisplayName="학번 별 기준파일 인덱스 추출" sap:VirtualizedContainerService.HintSize="1499,5645" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="studentNum_STR" />
               <Variable x:TypeArguments="x:String" Name="groub_STR" />
@@ -250,40 +250,41 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BuildDataTable sap2010:Annotation.AnnotationText="DT 프레임 생성&#xA;&#xA;열(1) : 학번&#xA;열(2) : 기준정보 인덱스&#xA;&#xA;out : stdIdxDT1" DataTable="[stdIdxDT1]" DisplayName="Build Data Table-학번별 기준정보 인덱스 쌓는 DT 생성 -&gt; stdIdxDT" sap:VirtualizedContainerService.HintSize="1456,167" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;학번&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;기준정보&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
+            <ui:BuildDataTable sap2010:Annotation.AnnotationText="DT 프레임 생성&#xA;&#xA;열(1) : 학번&#xA;열(2) : 기준정보 인덱스&#xA;&#xA;out : stdIdxDT1" DataTable="[stdIdxDT1]" DisplayName="Build Data Table-학번별 기준정보 인덱스 쌓는 DT 생성 -&gt; stdIdxDT" sap:VirtualizedContainerService.HintSize="1457,167" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;학번&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;기준정보&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:BuildDataTable>
-            <ui:BuildDataTable DataTable="{x:Null}" sap2010:Annotation.AnnotationText="out : tempDT" DisplayName="Build Data Table-임시파일에 쓸 DT" sap:VirtualizedContainerService.HintSize="1456,90" sap2010:WorkflowViewState.IdRef="BuildDataTable_5" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;공통교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;공통교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;핵심교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;핵심교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;학문기초교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;학문기초교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;일반교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;일반교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;전적대교양이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;교양학점소계&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;교양이수성공여부&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;교양미이수사유&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;_x0031_차작업성공여부&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+            <ui:BuildDataTable DataTable="{x:Null}" sap2010:Annotation.AnnotationText="out : tempDT" DisplayName="Build Data Table-임시파일에 쓸 DT" sap:VirtualizedContainerService.HintSize="1457,90" sap2010:WorkflowViewState.IdRef="BuildDataTable_5" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;공통교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;공통교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;핵심교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;핵심교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;학문기초교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;학문기초교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;일반교양_이수과목명&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;일반교양_이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;전적대교양이수학점&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;교양학점소계&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;교양이수성공여부&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;교양미이수사유&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;_x0031_차작업성공여부&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:BuildDataTable>
-            <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="inputDT1 = Sheet1 (학생 이수학점)&#xA;&#xA;1행 부터 호출" DataTable="[inputDT1]" DisplayName="for Each Row-학번별 기준정보 조정(큰거)" sap:VirtualizedContainerService.HintSize="1456,5564" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+            <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="inputDT1 = Sheet1 (학생 이수학점)&#xA;&#xA;1행 부터 호출" DataTable="[inputDT1]" DisplayName="for Each Row-학번별 기준정보 조정(큰거)" sap:VirtualizedContainerService.HintSize="1457,5114" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_inputDT1" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1406,5355" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1407,4905" sap2010:WorkflowViewState.IdRef="Sequence_13">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="iphack_STR" />
                       <Variable x:TypeArguments="x:String" Name="JoinType_STR" />
                       <Variable x:TypeArguments="sd:DataTable" Name="standardRow_DT" />
                       <Variable x:TypeArguments="x:String" Name="test_DR" />
                       <Variable x:TypeArguments="sd:DataRow" Name="setdatarow" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="inputDT2_filtered" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap2010:Annotation.AnnotationText="00신입 or 00편입을&#xA;신입생, 편입생 으로 재조정&#xA;&#xA;* JoinType_STR : 입학 구분(신입학/편입학) / 학과" Condition="[Convert.ToString(row(1)).Contains(&quot;신입&quot;)]" DisplayName="if-신입/편입, 학과 재조정 -&gt; JoinType_STR ( J 대문자 )" sap:VirtualizedContainerService.HintSize="1364,286" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If sap2010:Annotation.AnnotationText="00신입 or 00편입을&#xA;신입생, 편입생 으로 재조정&#xA;&#xA;* JoinType_STR : 입학 구분(신입학/편입학) / 학과" Condition="[Convert.ToString(row_inputDT1(1)).Contains(&quot;신입&quot;)]" DisplayName="if-신입/편입, 학과 재조정 -&gt; JoinType_STR ( J 대문자 )" sap:VirtualizedContainerService.HintSize="1365,286" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -295,7 +296,7 @@
                             <OutArgument x:TypeArguments="x:String">[JoinType_STR]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">["신입학/"+Convert.ToString(row(4))]</InArgument>
+                            <InArgument x:TypeArguments="x:String">["신입학/"+Convert.ToString(row_inputDT1(4))]</InArgument>
                           </Assign.Value>
                         </Assign>
                       </If.Then>
@@ -305,12 +306,12 @@
                             <OutArgument x:TypeArguments="x:String">[JoinType_STR]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">["편입학/"+Convert.ToString(row(4))]</InArgument>
+                            <InArgument x:TypeArguments="x:String">["편입학/"+Convert.ToString(row_inputDT1(4))]</InArgument>
                           </Assign.Value>
                         </Assign>
                       </If.Else>
                     </If>
-                    <If sap2010:Annotation.AnnotationText="편입생 유무를 T/F로 재조정&#xA;&#xA;* secondMajor_STR : 복수전공 유무(T/F)" Condition="[Convert.ToString(row(24)).Contains(&quot;복수전공&quot;)]" DisplayName="if-복수전공 유뮤 재조정 -&gt; secondMajor_STR" sap:VirtualizedContainerService.HintSize="1364,270" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If sap2010:Annotation.AnnotationText="편입생 유무를 T/F로 재조정&#xA;&#xA;* secondMajor_STR : 복수전공 유무(T/F)" Condition="[Convert.ToString(row_inputDT1(24)).Contains(&quot;복수전공&quot;)]" DisplayName="if-복수전공 유뮤 재조정 -&gt; secondMajor_STR" sap:VirtualizedContainerService.HintSize="1365,270" sap2010:WorkflowViewState.IdRef="If_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -337,12 +338,12 @@
                         </Assign>
                       </If.Else>
                     </If>
-                    <Assign sap2010:Annotation.AnnotationText="입학년도 구분을 학번으로 재조정&#xA;(2017-03-02 -&gt; 17)&#xA;(2019-03-02 -&gt; 19)&#xA;&#xA;* 엑셀 시트 속성이 '날짜'가 아닌 일반으로 설정되어야 한다.&#xA;&#xA;* studentNum_STR : 학생 학번" DisplayName="Assign - 입학년도를 학번으로 재조정 -&gt; studentNum_STR" sap:VirtualizedContainerService.HintSize="1364,200" sap2010:WorkflowViewState.IdRef="Assign_13">
+                    <Assign sap2010:Annotation.AnnotationText="입학년도 구분을 학번으로 재조정&#xA;(2017-03-02 -&gt; 17)&#xA;(2019-03-02 -&gt; 19)&#xA;&#xA;* 엑셀 시트 속성이 '날짜'가 아닌 일반으로 설정되어야 한다.&#xA;&#xA;* studentNum_STR : 학생 학번" DisplayName="Assign - 입학년도를 학번으로 재조정 -&gt; studentNum_STR" sap:VirtualizedContainerService.HintSize="1365,200" sap2010:WorkflowViewState.IdRef="Assign_13">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[studentNum_STR]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[Convert.ToString(row(8)).Substring(2,2)]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[Convert.ToString(row_inputDT1(8)).Substring(2,2)]</InArgument>
                       </Assign.Value>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -350,23 +351,11 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1364,232" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="274,154" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="테스트1" sap:VirtualizedContainerService.HintSize="232,62" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[studentNum_STR+&quot; here&quot;]" />
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                    </ui:CommentOut>
-                    <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="standardDT1 = 기준파일 엑셀 Sheet1 (교과목 분류)" DataTable="[standardDT1]" DisplayName="for Each Row-기준서파일 Sheet1(교과목 분류) 호출 (작은거1)" sap:VirtualizedContainerService.HintSize="1364,949" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                    <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="standardDT1 = 기준파일 엑셀 Sheet1 (교과목 분류)" DataTable="[standardDT1]" DisplayName="for Each Row-기준서파일 Sheet1(교과목 분류) 호출 (작은거1)" sap:VirtualizedContainerService.HintSize="1365,949" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="std" />
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_stdDT1" />
                           </ActivityAction.Argument>
                           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,769" sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <sap:WorkflowViewStateService.ViewState>
@@ -374,7 +363,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If sap2010:Annotation.AnnotationText="학번 별 입학구분 및 복수전공 유무를 파악한다.&#xA;&#xA;* std : standardDT1&#xA;* std(0) : 학번&#xA;* std(1) : 입학구분/학과&#xA;* std(2) : 복수전공(T/F)&#xA;&#xA;std(0)이 위에서 재선언한 '학번'(17,18,19,20) 에 포함되고, std(1)에 위에서 재선언한 '입학구분/학과'와 동일하고, std(2)에 위에서 재선언한 '복수전공 유무'(T/F)가 일치하는 조건&#xA;&#xA;std(0).ToString.Contains(studentNum_STR) AND std(1).ToString.Equals(JoinType_STR) AND std(2).ToString.Equals(secondMajor_STR)" Condition="[std(0).ToString.Contains(studentNum_STR) AND std(1).ToString.Equals(JoinType_STR) AND std(2).ToString.Equals(secondMajor_STR)]" DisplayName="if-학번 별 조건 파악" sap:VirtualizedContainerService.HintSize="484,677" sap2010:WorkflowViewState.IdRef="If_4">
+                            <If sap2010:Annotation.AnnotationText="학번 별 입학구분 및 복수전공 유무를 파악한다.&#xA;&#xA;* std : standardDT1&#xA;* std(0) : 학번&#xA;* std(1) : 입학구분/학과&#xA;* std(2) : 복수전공(T/F)&#xA;&#xA;std(0)이 위에서 재선언한 '학번'(17,18,19,20) 에 포함되고, std(1)에 위에서 재선언한 '입학구분/학과'와 동일하고, std(2)에 위에서 재선언한 '복수전공 유무'(T/F)가 일치하는 조건&#xA;&#xA;std(0).ToString.Contains(studentNum_STR) AND std(1).ToString.Equals(JoinType_STR) AND std(2).ToString.Equals(secondMajor_STR)" Condition="[row_stdDT1(0).ToString.Contains(studentNum_STR) AND row_stdDT1(1).ToString.Equals(JoinType_STR) AND row_stdDT1(2).ToString.Equals(secondMajor_STR)]" DisplayName="if-학번 별 조건 파악" sap:VirtualizedContainerService.HintSize="484,677" sap2010:WorkflowViewState.IdRef="If_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -387,8 +376,8 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <WriteLine DisplayName="테스트2" sap:VirtualizedContainerService.HintSize="232,62" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[row(8).ToString +&quot;,&quot;+standardDT1.Rows.IndexOf(std).ToString]" />
-                                  <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="조건에 맞는 행을 찾아 인덱스를 변환하고, DT에 추가한다.&#xA;&#xA;row : inputDT1 행 (학번:8)" ArrayRow="[{row(8).ToString, standardDT1.Rows.IndexOf(std)}]" DataTable="[stdIdxDT1]" DisplayName="Add Data Row-stdIdxDT에  학번, 인덱스 추가" sap:VirtualizedContainerService.HintSize="232,114" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                                  <WriteLine DisplayName="테스트2" sap:VirtualizedContainerService.HintSize="232,62" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[row_inputDT1(8).ToString +&quot;,&quot;+standardDT1.Rows.IndexOf(row_stdDT1).ToString]" />
+                                  <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="조건에 맞는 행을 찾아 인덱스를 변환하고, DT에 추가한다.&#xA;&#xA;row : inputDT1 행 (학번:8)" ArrayRow="[{row_inputDT1(8).ToString, standardDT1.Rows.IndexOf(row_stdDT1)}]" DataTable="[stdIdxDT1]" DisplayName="Add Data Row-stdIdxDT에  학번, 인덱스 추가" sap:VirtualizedContainerService.HintSize="232,114" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -407,14 +396,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
-                    <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="stdIdxDT의 1행을 제거한다.&#xA;&#xA;* 헤더를 제거해도 1열 공란이 남아있기에 제거한다.&#xA;&#xA;stdIdxDT는 아래와 같이 출력&#xA;'학번, 기준정보 인덱스 번호'&#xA;(60173153, 51)&#xA;" DataTable="[stdIdxDT1]" DisplayName="Remove Data Row-stdIdxDT 1행 제거" sap:VirtualizedContainerService.HintSize="1364,178" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="0">
+                    <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="stdIdxDT의 1행을 제거한다.&#xA;&#xA;* 헤더를 제거해도 1열 공란이 남아있기에 제거한다.&#xA;&#xA;stdIdxDT는 아래와 같이 출력&#xA;'학번, 기준정보 인덱스 번호'&#xA;(60173153, 51)&#xA;" DataTable="[stdIdxDT1]" DisplayName="Remove Data Row-stdIdxDT 1행 제거" sap:VirtualizedContainerService.HintSize="1365,178" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="0">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:RemoveDataRow>
-                    <Assign sap2010:Annotation.AnnotationText="stdIdxDT의 2번째 열에 있는 인덱스 번호를 기준서 파일에 접근하여 기준서 파일에 인덱스 번호에 맞는 Row를 가져온다." DisplayName="Assign - 기준서 파일 인덱스 번호별 row" sap:VirtualizedContainerService.HintSize="1364,120" sap2010:WorkflowViewState.IdRef="Assign_25">
+                    <Assign sap2010:Annotation.AnnotationText="stdIdxDT의 2번째 열에 있는 인덱스 번호를 기준서 파일에 접근하여 기준서 파일에 인덱스 번호에 맞는 Row를 가져온다." DisplayName="Assign - 기준서 파일 인덱스 번호별 row" sap:VirtualizedContainerService.HintSize="1365,120" sap2010:WorkflowViewState.IdRef="Assign_25">
                       <Assign.To>
                         <OutArgument x:TypeArguments="sd:DataRow">[setdatarow]</OutArgument>
                       </Assign.To>
@@ -427,34 +416,41 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <WriteLine sap2010:Annotation.AnnotationText="setdatarow 3~12&#xA;테스트용" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1364,106" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="[setdatarow(0).ToString]">
+                    <WriteLine sap2010:Annotation.AnnotationText="setdatarow 3~12&#xA;테스트용" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1365,106" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="[setdatarow(0).ToString]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </WriteLine>
-                    <If sap2010:Annotation.AnnotationText="신입학 편입학 구분&#xA;&#xA;*JoinType_STR은 위에서 선언된 변수, (재활용 하는 것)&#xA;" Condition="[JoinType_STR.Contains(&quot;신입학&quot;)]" DisplayName="if - To-Be 7번 파트" sap:VirtualizedContainerService.HintSize="1364,2602" sap2010:WorkflowViewState.IdRef="If_21">
+                    <If sap2010:Annotation.AnnotationText="신입학 편입학 구분&#xA;&#xA;*JoinType_STR은 위에서 선언된 변수, (재활용 하는 것)&#xA;" Condition="[JoinType_STR.Contains(&quot;신입학&quot;)]" DisplayName="if - To-Be 7번 파트" sap:VirtualizedContainerService.HintSize="1365,2322" sap2010:WorkflowViewState.IdRef="If_21">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="신입학" sap:VirtualizedContainerService.HintSize="696,2376" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <Sequence DisplayName="신입학" sap:VirtualizedContainerService.HintSize="568,2022" sap2010:WorkflowViewState.IdRef="Sequence_28">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="654,62" sap2010:WorkflowViewState.IdRef="WriteLine_26" Text="[Convert.ToString(row.Item(15)) +&quot; &quot;+ convert.ToString(setdatarow.Item(4))]" />
-                          <Sequence DisplayName="To-Be 9.2파트" sap:VirtualizedContainerService.HintSize="654,1704" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="526,62" sap2010:WorkflowViewState.IdRef="WriteLine_26" Text="[Convert.ToString(row_inputDT1.Item(15)) +&quot; &quot;+ convert.ToString(setdatarow.Item(4))]" />
+                          <Sequence DisplayName="To-Be 9.2파트" sap:VirtualizedContainerService.HintSize="526,1704" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="s:String[]" Name="Sort_Arr">
+                                <Variable.Default>
+                                  <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;공통교양&quot;,&quot;핵심교양&quot;,&quot;학문기초교양&quot;,&quot;일반교양&quot;}" />
+                                </Variable.Default>
+                              </Variable>
+                            </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If sap2010:Annotation.AnnotationText="취득한 공통교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row.Item(10)) &gt;= convert.ToInt32(setdatarow.Item(5))]" DisplayName="if-공통교양 학점" sap:VirtualizedContainerService.HintSize="484,364" sap2010:WorkflowViewState.IdRef="If_23">
+                            <If sap2010:Annotation.AnnotationText="취득한 공통교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row_inputDT1.Item(10)) &gt;= convert.ToInt32(setdatarow.Item(5))]" DisplayName="if-공통교양 학점" sap:VirtualizedContainerService.HintSize="484,364" sap2010:WorkflowViewState.IdRef="If_23">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -472,7 +468,7 @@
                                       <OutArgument x:TypeArguments="x:String">[miIsuSTR]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[miIsuSTR + "공통교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(5))-convert.ToInt32(row.Item(10)))+"),"]</InArgument>
+                                      <InArgument x:TypeArguments="x:String">[miIsuSTR + "공통교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(5))-convert.ToInt32(row_inputDT1.Item(10)))+"),"]</InArgument>
                                     </Assign.Value>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -483,7 +479,7 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <If sap2010:Annotation.AnnotationText="취득한 핵심교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row.Item(11)) &gt;= convert.ToInt32(setdatarow.Item(7))]" DisplayName="if-핵심교양 학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_24">
+                            <If sap2010:Annotation.AnnotationText="취득한 핵심교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row_inputDT1.Item(11)) &gt;= convert.ToInt32(setdatarow.Item(7))]" DisplayName="if-핵심교양 학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_24">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -495,7 +491,7 @@
                                     <OutArgument x:TypeArguments="x:String">[miIsuSTR]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "핵심교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(7))-Convert.ToInt32(row.Item(11)))+"),"]</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "핵심교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(7))-Convert.ToInt32(row_inputDT1.Item(11)))+"),"]</InArgument>
                                   </Assign.Value>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -505,7 +501,7 @@
                                 </Assign>
                               </If.Else>
                             </If>
-                            <If sap2010:Annotation.AnnotationText="취득한 학문기초교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row.Item(12)) &gt;= convert.ToInt32(setdatarow.Item(6))]" DisplayName="if-학문기초 학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_25">
+                            <If sap2010:Annotation.AnnotationText="취득한 학문기초교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row_inputDT1.Item(12)) &gt;= convert.ToInt32(setdatarow.Item(6))]" DisplayName="if-학문기초 학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_25">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -517,7 +513,7 @@
                                     <OutArgument x:TypeArguments="x:String">[miIsuSTR]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "학문기초교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(6))-convert.ToInt32(row.Item(12)))+"),"]</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "학문기초교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(6))-convert.ToInt32(row_inputDT1.Item(12)))+"),"]</InArgument>
                                   </Assign.Value>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -527,7 +523,7 @@
                                 </Assign>
                               </If.Else>
                             </If>
-                            <If sap2010:Annotation.AnnotationText="취득한 일반교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row.Item(13)) &gt;= convert.ToInt32(setdatarow.Item(8))]" DisplayName="if-일반교양 학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_26">
+                            <If sap2010:Annotation.AnnotationText="취득한 일반교양 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row_inputDT1.Item(13)) &gt;= convert.ToInt32(setdatarow.Item(8))]" DisplayName="if-일반교양 학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_26">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -539,7 +535,7 @@
                                     <OutArgument x:TypeArguments="x:String">[miIsuSTR]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "일반교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(8))-convert.ToInt32(row.Item(13)))+"),"]</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "일반교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(8))-convert.ToInt32(row_inputDT1.Item(13)))+"),"]</InArgument>
                                   </Assign.Value>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -549,7 +545,7 @@
                                 </Assign>
                               </If.Else>
                             </If>
-                            <If sap2010:Annotation.AnnotationText="취득한 교양 총 이수 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row.Item(15)) &gt;= convert.ToInt32(setdatarow.Item(4))]" DisplayName="if-교양 총 이수학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_27">
+                            <If sap2010:Annotation.AnnotationText="취득한 교양 총 이수 학점이 본인에게 해당되는 기준의 학점을 충족했는지?" Condition="[Convert.ToInt32(row_inputDT1.Item(15)) &gt;= convert.ToInt32(setdatarow.Item(4))]" DisplayName="if-교양 총 이수학점" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_27">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -561,7 +557,7 @@
                                     <OutArgument x:TypeArguments="x:String">[miIsuSTR]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "교양총이수학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(4))-convert.ToInt32(row.Item(15)))+"),"]</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[miIsuSTR + "교양총이수학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(4))-convert.ToInt32(row_inputDT1.Item(15)))+"),"]</InArgument>
                                   </Assign.Value>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -572,42 +568,29 @@
                               </If.Else>
                             </If>
                           </Sequence>
-                          <If sap2010:Annotation.AnnotationText="( Convert.ToInt32(row.Item(10)) &gt;= convert.ToInt32(setdatarow.Item(5)) //And// Convert.ToInt32(row.Item(11)) &gt;= convert.ToInt32(setdatarow.Item(7)) //And// Convert.ToInt32(row.Item(12)) &gt;= convert.ToInt32(setdatarow.Item(6)) //And// Convert.ToInt32(row.Item(13)) &gt;= convert.ToInt32(setdatarow.Item(8)) ) //Or// Convert.ToInt32(row.Item(15)) &gt;= convert.ToInt32(setdatarow.Item(4))" Condition="[( Convert.ToInt32(row.Item(10)) &gt;= convert.ToInt32(setdatarow.Item(5)) And Convert.ToInt32(row.Item(11)) &gt;= convert.ToInt32(setdatarow.Item(7)) And Convert.ToInt32(row.Item(12)) &gt;= convert.ToInt32(setdatarow.Item(6)) And Convert.ToInt32(row.Item(13)) &gt;= convert.ToInt32(setdatarow.Item(8)) ) Or Convert.ToInt32(row.Item(15)) &gt;= convert.ToInt32(setdatarow.Item(4))]" sap:VirtualizedContainerService.HintSize="654,438" sap2010:WorkflowViewState.IdRef="If_19">
+                          <Sequence DisplayName="To-Be 10번대 실행" sap:VirtualizedContainerService.HintSize="526,84" sap2010:WorkflowViewState.IdRef="Sequence_34">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If.Then>
-                              <If Condition="[Convert.ToInt32(row.Item(10)) &gt;= convert.ToInt32(setdatarow.Item(5)) And Convert.ToInt32(row.Item(11)) &gt;= convert.ToInt32(setdatarow.Item(7)) And Convert.ToInt32(row.Item(12)) &gt;= convert.ToInt32(setdatarow.Item(6)) And Convert.ToInt32(row.Item(13)) &gt;= convert.ToInt32(setdatarow.Item(8))]" sap:VirtualizedContainerService.HintSize="509,212" sap2010:WorkflowViewState.IdRef="If_22">
-                                <If.Then>
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="232,62" sap2010:WorkflowViewState.IdRef="WriteLine_27" Text="[&quot;재학생/계속진행&quot;.ToString]" />
-                                </If.Then>
-                                <If.Else>
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="232,62" sap2010:WorkflowViewState.IdRef="WriteLine_28" Text="[&quot;XX교양 학점 부족&quot;.ToString]" />
-                                </If.Else>
-                              </If>
-                            </If.Then>
-                          </If>
+                          </Sequence>
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="편입학" sap:VirtualizedContainerService.HintSize="623,558" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence DisplayName="편입학" sap:VirtualizedContainerService.HintSize="752,2096" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="581,62" sap2010:WorkflowViewState.IdRef="WriteLine_29" Text="[Convert.ToString(row.Item(15)) +&quot; &quot;+ convert.ToString(setdatarow.Item(4))]" />
-                          <If sap2010:Annotation.AnnotationText="편입생이 취득한 교양학점이 해당 학생에 부합하는 기준에 충족되는지?" Condition="[Convert.ToInt32(row.Item(15)) &gt;= convert.ToInt32(setdatarow.Item(4))]" DisplayName="if-To-Be 9.1 파트" sap:VirtualizedContainerService.HintSize="581,364" sap2010:WorkflowViewState.IdRef="If_20">
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="710,62" sap2010:WorkflowViewState.IdRef="WriteLine_29" Text="[Convert.ToString(row_inputDT1.Item(15)) +&quot; &quot;+ convert.ToString(setdatarow.Item(4))]" />
+                          <If sap2010:Annotation.AnnotationText="편입생이 취득한 교양학점이 해당 학생에 부합하는 기준에 충족되는지?" Condition="[Convert.ToInt32(row_inputDT1.Item(15)) &gt;= convert.ToInt32(setdatarow.Item(4))]" DisplayName="if-To-Be 9.1 파트" sap:VirtualizedContainerService.HintSize="710,364" sap2010:WorkflowViewState.IdRef="If_20">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If.Then>
-                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="232,62" sap2010:WorkflowViewState.IdRef="WriteLine_30" Text="편입생/계속 진행" />
-                            </If.Then>
                             <If.Else>
                               <Sequence sap:VirtualizedContainerService.HintSize="304,183" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -620,7 +603,7 @@
                                     <OutArgument x:TypeArguments="x:String">[miIsuSTR]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[miIsuSTR+"편입생교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(4))-convert.ToInt32(row.Item(15)))+"),"]</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[miIsuSTR+"편입생교양학점부족("+Convert.ToString(convert.ToInt32(setdatarow.Item(4))-convert.ToInt32(row_inputDT1.Item(15)))+"),"]</InArgument>
                                   </Assign.Value>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -631,9 +614,166 @@
                               </Sequence>
                             </If.Else>
                           </If>
+                          <Sequence DisplayName="To-Be 10번대 실행" sap:VirtualizedContainerService.HintSize="710,1498" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="s:String[]" Default="[{&quot;공통교양&quot;,&quot;핵심교양&quot;,&quot;학문기초교양&quot;,&quot;일반교양&quot;}]" Name="Sort_Arr" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Sort_Arr : {&quot;공통교양&quot;,&quot;핵심교양&quot;,&quot;학문기초교양&quot;,&quot;일반교양&quot;}&#xD;&#xA;&#xD;&#xA;For Each로 하나씩 호출" DisplayName="For Each-{공통, 핵심, 학문기초, 일반} 배열 호출" sap:VirtualizedContainerService.HintSize="668,438" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[Sort_Arr]">
+                              <ui:ForEach.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="item_교양구분" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="376,243" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:FilterDataTable sap2010:Annotation.AnnotationText="inputDT2 를 필터링&#xD;&#xA;&#xD;&#xA;학번 | 교양구분 | 교과목 | 학점&#xD;&#xA;&#xD;&#xA;out : inputDT2_filtered" DataTable="[inputDT2]" DisplayName="Filter Data Table - 학번별 '공통교양' 이수 항목 필터" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,151" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[inputDT2_filtered]" SelectColumnsMode="Keep">
+                                      <ui:FilterDataTable.Filters>
+                                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["학번"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                            <ui:FilterOperationArgument.Operand>
+                                              <InArgument x:TypeArguments="x:String">[Convert.ToString(row_inputDT1(8))]</InArgument>
+                                            </ui:FilterOperationArgument.Operand>
+                                          </ui:FilterOperationArgument>
+                                          <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["이수구분"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                            <ui:FilterOperationArgument.Operand>
+                                              <InArgument x:TypeArguments="x:Object">[item_교양구분]</InArgument>
+                                            </ui:FilterOperationArgument.Operand>
+                                          </ui:FilterOperationArgument>
+                                        </scg:List>
+                                      </ui:FilterDataTable.Filters>
+                                      <ui:FilterDataTable.SelectColumns>
+                                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                          <InArgument x:TypeArguments="x:String">["학번"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">["이수구분"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">["교과목명"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">["학점"]</InArgument>
+                                        </scg:List>
+                                      </ui:FilterDataTable.SelectColumns>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:FilterDataTable>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEach.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ForEach>
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[inputDT2_filtered]" DisplayName="For Each Row - 필터링된 DT를 한 열씩 호출" sap:VirtualizedContainerService.HintSize="668,928" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_inputDT2Filtered" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="618,779" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[standardDT2]" DisplayName="For Each Row - 기준서파일 standardDT2 한 열씩 호출" sap:VirtualizedContainerService.HintSize="576,687" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+                                      <ui:ForEachRow.Body>
+                                        <ActivityAction x:TypeArguments="sd:DataRow">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_standardDT2" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,538" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="index_Arr" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If sap2010:Annotation.AnnotationText="위에 for each에서 내려온 교과목을 기준서 파일에 비교하고, 위치를 찾은 후 해당 위치에 대응하는 테이블 헤더를 찾아냄" Condition="[row_standardDT2.ItemArray.Contains(inputDT2_filtered(2))]" DisplayName="If - 해당 교과목에 대한 인덱스와 칼럼을 가져오기" sap:VirtualizedContainerService.HintSize="484,446" sap2010:WorkflowViewState.IdRef="If_28">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:String" Name="ColName_STR" />
+                                                    <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Name="elective_gongtongDIC">
+                                                      <Variable.Default>
+                                                        <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Int32)" ExpressionText="New Dictionary(of String, Int32) from {{&quot;기독교1&quot;,0},{&quot;기독교2&quot;,0},{&quot;기독교3&quot;,0},{&quot;사고와표현&quot;,0},{&quot;영어&quot;,0},{&quot;영어회화&quot;,0}}" />
+                                                      </Variable.Default>
+                                                    </Variable>
+                                                    <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Name="elective_hacksimDIC">
+                                                      <Variable.Default>
+                                                        <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Int32)" ExpressionText="New Dictionary(of String, Int32) from {{&quot;역사와철학&quot;,0},{&quot;사회와공동체&quot;,0},{&quot;문화와예술&quot;,0},{&quot;과학과기술&quot;,0}}" />
+                                                      </Variable.Default>
+                                                    </Variable>
+                                                    <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Name="elective_hackmunkichoDIC">
+                                                      <Variable.Default>
+                                                        <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Int32)" ExpressionText="New Dictionary(of String, Int32) from {{&quot;학문기초교양&quot;,0}}" />
+                                                      </Variable.Default>
+                                                    </Variable>
+                                                    <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Name="elective_illbanDIC">
+                                                      <Variable.Default>
+                                                        <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Int32)" ExpressionText="New Dictionary(of String, Int32) from {{&quot;일반교양&quot;,0}}" />
+                                                      </Variable.Default>
+                                                    </Variable>
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign DisplayName="Assign - 인덱스 찾기" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[index_Arr]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[(Array.IndexOf(row_standardDT2.ItemArray, inputDT2_filtered(2))).ToString]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign DisplayName="Assign - 헤더 찾기" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[ColName_STR]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[standardDT2.Columns(index_Arr).ColumnName]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                </Sequence>
+                                              </If.Then>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEachRow.Body>
+                                    </ui:ForEachRow>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                            </ui:ForEachRow>
+                          </Sequence>
                         </Sequence>
                       </If.Else>
                     </If>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1365,62" sap2010:WorkflowViewState.IdRef="WriteLine_31" Text="[convert.ToString(row_inputDT1(8))]" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
@@ -643,6 +783,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1457,62" sap2010:WorkflowViewState.IdRef="WriteLine_32" Text="inputdt1 for each 끝" />
           </Sequence>
         </FlowStep>
       </FlowStep.Next>
@@ -651,10 +792,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,7</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:Size x:Key="ShapeSize">200,68</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="studentDIC 생성" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence DisplayName="studentDIC 생성" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Name="newArr" />
           <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Name="DIC" />
@@ -816,10 +957,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">0,7</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:Size x:Key="ShapeSize">200,68</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="신입학, 편입학 구분" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence DisplayName="신입학, 편입학 구분" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -849,30 +990,30 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">120,177</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:Size x:Key="ShapeSize">200,68</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Data전처리" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_21">
+      <Sequence DisplayName="Data전처리" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_21">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="982,4375" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="983,4430" sap2010:WorkflowViewState.IdRef="TryCatch_1">
           <TryCatch.Try>
-            <Sequence DisplayName="데이터 전처리" sap:VirtualizedContainerService.HintSize="944,4148" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <Sequence DisplayName="데이터 전처리" sap:VirtualizedContainerService.HintSize="945,4198" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="재직학과 엑셀 데이터 열람" sap:VirtualizedContainerService.HintSize="902,4056" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="C:\COFC_RPA\(201029)졸업사정 대상자 샘플(미래융합대학)_synced.xlsx">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="재직학과 엑셀 데이터 열람" sap:VirtualizedContainerService.HintSize="903,4106" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="C:\COFC_RPA\(201029)졸업사정 대상자 샘플(미래융합대학)_synced.xlsx">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="재직학과 엑셀 데이터 전처리" sap:VirtualizedContainerService.HintSize="868,3947" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <Sequence DisplayName="재직학과 엑셀 데이터 전처리" sap:VirtualizedContainerService.HintSize="869,3997" sap2010:WorkflowViewState.IdRef="Sequence_19">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" Name="completedSubByStudent_DT" />
                         <Variable x:TypeArguments="sd:DataTable" Name="studentNum_DT" />
@@ -884,7 +1025,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Sheet1 : 요약(학생별 이수학점)&#xA;Sheet2 : 전산팀 데이터 원본(학생별 이수 교과목)&#xA;&#xA;* completedSubByStudent_DT : 학생별 이수 교과목" DataTable="[completedSubByStudent_DT]" DisplayName="Sheet2(테스트), 전산팀 데이터 조회 -&gt; completedSubByStudent_DT" sap:VirtualizedContainerService.HintSize="826,131" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" SheetName="학생별 이수과목">
+                      <ui:ExcelReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Sheet1 : 요약(학생별 이수학점)&#xA;Sheet2 : 전산팀 데이터 원본(학생별 이수 교과목)&#xA;&#xA;* completedSubByStudent_DT : 학생별 이수 교과목" DataTable="[completedSubByStudent_DT]" DisplayName="Sheet2(테스트), 전산팀 데이터 조회 -&gt; completedSubByStudent_DT" sap:VirtualizedContainerService.HintSize="827,135" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" SheetName="학생별 이수과목">
                         <ui:ExcelReadRange.Range>
                           <InArgument x:TypeArguments="x:String">
                             <Literal x:TypeArguments="x:String" Value="" />
@@ -896,7 +1037,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ExcelReadRange>
-                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="1. 전산팀으로 부터 받은 원본 데이터에서 재수강(성적:R), 과락(성적:F), 논패스(성적:N) 데이터를 제거한다.&#xA;&#xA;2. 필요 없는 열(칼럼) 제거&#xA;연번, 학년, 이수학기, 성명, 교과목번호, 과목이수학기&#xA;&#xA;*중복 교과목을 방지하기 위해 R 제거 한다.&#xA;*기존 전산팀DT변수에 덮어쓴다." DataTable="[completedSubByStudent_DT]" DisplayName="성적 F, R 제거 및 필요 없는 열 제거 -&gt; 전산팀DT" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="826,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[completedSubByStudent_DT]" SelectColumnsMode="Remove">
+                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="1. 전산팀으로 부터 받은 원본 데이터에서 재수강(성적:R), 과락(성적:F), 논패스(성적:N) 데이터를 제거한다.&#xA;&#xA;2. 필요 없는 열(칼럼) 제거&#xA;연번, 학년, 이수학기, 성명, 교과목번호, 과목이수학기&#xA;&#xA;*중복 교과목을 방지하기 위해 R 제거 한다.&#xA;*기존 전산팀DT변수에 덮어쓴다." DataTable="[completedSubByStudent_DT]" DisplayName="성적 F, R 제거 및 필요 없는 열 제거 -&gt; 전산팀DT" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="827,199" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[completedSubByStudent_DT]" SelectColumnsMode="Remove">
                         <ui:FilterDataTable.Filters>
                           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                             <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -941,14 +1082,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FilterDataTable>
-                      <ui:ExcelWriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="R점수 및 불필요한 열을 제거한 '전산팀DT' 출력한다." DataTable="[completedSubByStudent_DT]" DisplayName="R성적이 제거된 전산팀DT 출력" sap:VirtualizedContainerService.HintSize="826,118" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="R제거" StartingCell="A1">
+                      <ui:ExcelWriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="R점수 및 불필요한 열을 제거한 '전산팀DT' 출력한다." DataTable="[completedSubByStudent_DT]" DisplayName="R성적이 제거된 전산팀DT 출력" sap:VirtualizedContainerService.HintSize="827,118" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="R제거" StartingCell="A1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ExcelWriteRange>
-                      <ui:ExcelReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="비교를 위해 1차 기준으로 잡을 학번을 추출 하기 위해 학생별 이수학점을 DT로 추출" DataTable="[studentNum_DT]" DisplayName="Sheet1 (학생별 이수학점) -&gt; 학번DT" sap:VirtualizedContainerService.HintSize="826,101" sap2010:WorkflowViewState.IdRef="ExcelReadRange_10" SheetName="학생별 이수학점">
+                      <ui:ExcelReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="비교를 위해 1차 기준으로 잡을 학번을 추출 하기 위해 학생별 이수학점을 DT로 추출" DataTable="[studentNum_DT]" DisplayName="Sheet1 (학생별 이수학점) -&gt; 학번DT" sap:VirtualizedContainerService.HintSize="827,103" sap2010:WorkflowViewState.IdRef="ExcelReadRange_10" SheetName="학생별 이수학점">
                         <ui:ExcelReadRange.Range>
                           <InArgument x:TypeArguments="x:String">
                             <Literal x:TypeArguments="x:String" Value="" />
@@ -960,7 +1101,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ExcelReadRange>
-                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="학번DT에서 학번 열만 빼고 나머지 다 삭제" DataTable="[studentNum_DT]" DisplayName="학번 열만 남기고 삭제 -&gt; 학번DT" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="826,90" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[studentNum_DT]" SelectColumnsMode="Keep">
+                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="학번DT에서 학번 열만 빼고 나머지 다 삭제" DataTable="[studentNum_DT]" DisplayName="학번 열만 남기고 삭제 -&gt; 학번DT" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="827,90" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[studentNum_DT]" SelectColumnsMode="Keep">
                         <ui:FilterDataTable.Filters>
                           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                             <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -977,34 +1118,34 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FilterDataTable>
-                      <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="0행 헤더 제거" DataTable="[studentNum_DT]" DisplayName="학번열 헤더 제거" sap:VirtualizedContainerService.HintSize="826,53" sap2010:WorkflowViewState.IdRef="RemoveDataRow_2" RowIndex="0">
+                      <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="0행 헤더 제거" DataTable="[studentNum_DT]" DisplayName="학번열 헤더 제거" sap:VirtualizedContainerService.HintSize="827,53" sap2010:WorkflowViewState.IdRef="RemoveDataRow_2" RowIndex="0">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:RemoveDataRow>
-                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="교양 학점 총합을 정리하기 위한 새로운 DT 생성&#xA;&#xA;out : gradesEleTotal_DT" DataTable="[gradesElETotal_DT]" DisplayName="교양 학점 총합 계산 DT -&gt; gradesEleTotal_DT" sap:VirtualizedContainerService.HintSize="826,116" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;공통교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;핵심교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;학문기초교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;일반교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="교양 학점 총합을 정리하기 위한 새로운 DT 생성&#xA;&#xA;out : gradesEleTotal_DT" DataTable="[gradesElETotal_DT]" DisplayName="교양 학점 총합 계산 DT -&gt; gradesEleTotal_DT" sap:VirtualizedContainerService.HintSize="827,119" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;공통교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;핵심교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;학문기초교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;일반교양&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:BuildDataTable>
-                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="전공 학점 총합을 정리하기 위한 새로운 DT 생성&#xA;&#xA;out : gradesMajorTotal_DT" DataTable="[gradesMajorTotal_DT]" DisplayName="전공 학점 총합 계산 DT 생성 -&gt; gradesMajorTotal_DT" sap:VirtualizedContainerService.HintSize="826,116" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;전공&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
+                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="전공 학점 총합을 정리하기 위한 새로운 DT 생성&#xA;&#xA;out : gradesMajorTotal_DT" DataTable="[gradesMajorTotal_DT]" DisplayName="전공 학점 총합 계산 DT 생성 -&gt; gradesMajorTotal_DT" sap:VirtualizedContainerService.HintSize="827,119" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;전공&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:BuildDataTable>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Sheet1 에서 학번을 순서대로 뽑아 생성했던 '학번DT'를&#xA;&#xA;index 0부터 순차적으로 가져와 1차 기준으로 사용하고 Sheet2 의 2차 기준학번과 대조한다.&#xA;&#xA;* 다중for문 처럼 돌아간다." DataTable="[studentNum_DT]" DisplayName="For Each Row_Sheet1의 학번(1차 기준 학번)" sap:VirtualizedContainerService.HintSize="826,1654" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Sheet1 에서 학번을 순서대로 뽑아 생성했던 '학번DT'를&#xA;&#xA;index 0부터 순차적으로 가져와 1차 기준으로 사용하고 Sheet2 의 2차 기준학번과 대조한다.&#xA;&#xA;* 다중for문 처럼 돌아간다." DataTable="[studentNum_DT]" DisplayName="For Each Row_Sheet1의 학번(1차 기준 학번)" sap:VirtualizedContainerService.HintSize="827,1684" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_StudentNum" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="1차 기준 학번" sap:VirtualizedContainerService.HintSize="776,1420" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence DisplayName="1차 기준 학번" sap:VirtualizedContainerService.HintSize="777,1444" sap2010:WorkflowViewState.IdRef="Sequence_18">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Double" Name="공통교양_합계" />
                                 <Variable x:TypeArguments="x:Int32" Name="핵심교양_합계" />
@@ -1019,7 +1160,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="전산팀DT 에서 학번만 추출하여 2차 학번기준을 만든기 위해 전산팀DT2를 생성한다.&#xA;&#xA;전산팀DT2는 계속 덮어씌워져 1차 기준 학번에 맞는 학번들을 계속 필터링한다." DataTable="[completedSubByStudent_DT]" DisplayName="학번에 따른 필터링" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="734,146" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[전산팀DT2]" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="전산팀DT 에서 학번만 추출하여 2차 학번기준을 만든기 위해 전산팀DT2를 생성한다.&#xA;&#xA;전산팀DT2는 계속 덮어씌워져 1차 기준 학번에 맞는 학번들을 계속 필터링한다." DataTable="[completedSubByStudent_DT]" DisplayName="학번에 따른 필터링" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="735,151" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[전산팀DT2]" SelectColumnsMode="Keep">
                                 <ui:FilterDataTable.Filters>
                                   <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                     <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -1043,19 +1184,19 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:FilterDataTable>
-                              <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Sheet1에서 추출한 1차 기준 학번에 따른 수강 과목을 전산팀DT2에 맞춰 2차 기준 학번을 생성하고 비교를 진행한다." DataTable="[전산팀DT2]" DisplayName="For Each Row_Sheet2 의 이수교과목" sap:VirtualizedContainerService.HintSize="734,874" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                              <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Sheet1에서 추출한 1차 기준 학번에 따른 수강 과목을 전산팀DT2에 맞춰 2차 기준 학번을 생성하고 비교를 진행한다." DataTable="[전산팀DT2]" DisplayName="For Each Row_Sheet2 의 이수교과목" sap:VirtualizedContainerService.HintSize="735,885" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_completedSubject" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="2차 기준 학번" sap:VirtualizedContainerService.HintSize="684,696" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                    <Sequence DisplayName="2차 기준 학번" sap:VirtualizedContainerService.HintSize="685,706" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap2010:Annotation.AnnotationText="row_이수교과목 '학번'(2차 기준) 확인" DisplayName="비교 학번기준 지정" sap:VirtualizedContainerService.HintSize="642,91" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                      <Assign sap2010:Annotation.AnnotationText="row_이수교과목 '학번'(2차 기준) 확인" DisplayName="비교 학번기준 지정" sap:VirtualizedContainerService.HintSize="643,91" sap2010:WorkflowViewState.IdRef="Assign_14">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[학번기준]</OutArgument>
                                         </Assign.To>
@@ -1068,9 +1209,9 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </Assign>
-                                      <If Condition="[(convert.ToString(row_StudentNum(0))).Equals(학번기준)]" DisplayName="1차 기준 학번과 동일한 값을 갖는 2차 기준 학번을 기준으로 이수 과목을 파악함. " sap:VirtualizedContainerService.HintSize="642,372" sap2010:WorkflowViewState.IdRef="If_5">
+                                      <If Condition="[(convert.ToString(row_StudentNum(0))).Equals(학번기준)]" DisplayName="1차 기준 학번과 동일한 값을 갖는 2차 기준 학번을 기준으로 이수 과목을 파악함. " sap:VirtualizedContainerService.HintSize="643,381" sap2010:WorkflowViewState.IdRef="If_5">
                                         <If.Then>
-                                          <Switch x:TypeArguments="x:String" DisplayName="카테고리 별 학점 계산" Expression="[row_completedSubject(4).ToString]" sap:VirtualizedContainerService.HintSize="497,225" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                                          <Switch x:TypeArguments="x:String" DisplayName="카테고리 별 학점 계산" Expression="[row_completedSubject(4).ToString]" sap:VirtualizedContainerService.HintSize="498,232" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                                             <Assign x:Key="공통교양 (구 필수교양)" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:Double">[공통교양_합계]</OutArgument>
@@ -1114,7 +1255,7 @@
                                           </Switch>
                                         </If.Then>
                                       </If>
-                                      <WriteLine DisplayName="테스트용" sap:VirtualizedContainerService.HintSize="642,61" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[convert.ToString(row_StudentNum(0))+&quot;/&quot;+학번기준+&quot;/ 공통: &quot;+공통교양_합계.ToString+&quot;/ 핵심&quot;+핵심교양_합계.ToString+&quot;/ 학기: &quot;+학문기초교양_합계.ToString+&quot;/ 일반: &quot;+일반교양_합계.ToString+&quot;/ 전공1단계 : &quot;+전공1단계_합계.ToString]" />
+                                      <WriteLine DisplayName="테스트용" sap:VirtualizedContainerService.HintSize="643,62" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[convert.ToString(row_StudentNum(0))+&quot;/&quot;+학번기준+&quot;/ 공통: &quot;+공통교양_합계.ToString+&quot;/ 핵심&quot;+핵심교양_합계.ToString+&quot;/ 학기: &quot;+학문기초교양_합계.ToString+&quot;/ 일반: &quot;+일반교양_합계.ToString+&quot;/ 전공1단계 : &quot;+전공1단계_합계.ToString]" />
                                     </Sequence>
                                   </ActivityAction>
                                 </ui:ForEachRow.Body>
@@ -1124,14 +1265,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ForEachRow>
-                              <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="교양학점총계DT에 계산된 값을 행별로 추가한다.&#xA;&#xA;in : gradesElETotal_DT" ArrayRow="[{공통교양_합계, 핵심교양_합계, 학문기초교양_합계, 일반교양_합계}]" DataTable="[gradesElETotal_DT]" DisplayName="교양 학점 총계 DT 추가" sap:VirtualizedContainerService.HintSize="734,94" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+                              <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="교양학점총계DT에 계산된 값을 행별로 추가한다.&#xA;&#xA;in : gradesElETotal_DT" ArrayRow="[{공통교양_합계, 핵심교양_합계, 학문기초교양_합계, 일반교양_합계}]" DataTable="[gradesElETotal_DT]" DisplayName="교양 학점 총계 DT 추가" sap:VirtualizedContainerService.HintSize="735,98" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:AddDataRow>
-                              <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="전공학점총계DT에 계산된 값을 행별로 추가한다.&#xA;&#xA;in : gradesMajorTotal_DT" ArrayRow="[{전공1단계_합계.ToString}]" DataTable="[gradesMajorTotal_DT]" DisplayName="전공 학점 총계 DT 추가" sap:VirtualizedContainerService.HintSize="734,94" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
+                              <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="전공학점총계DT에 계산된 값을 행별로 추가한다.&#xA;&#xA;in : gradesMajorTotal_DT" ArrayRow="[{전공1단계_합계.ToString}]" DataTable="[gradesMajorTotal_DT]" DisplayName="전공 학점 총계 DT 추가" sap:VirtualizedContainerService.HintSize="735,98" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1147,14 +1288,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEachRow>
-                      <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="0행 헤더 제거" DataTable="[gradesMajorTotal_DT]" DisplayName="학번열 헤더 제거" sap:VirtualizedContainerService.HintSize="826,53" sap2010:WorkflowViewState.IdRef="RemoveDataRow_3" RowIndex="0">
+                      <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="0행 헤더 제거" DataTable="[gradesMajorTotal_DT]" DisplayName="학번열 헤더 제거" sap:VirtualizedContainerService.HintSize="827,53" sap2010:WorkflowViewState.IdRef="RemoveDataRow_3" RowIndex="0">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:RemoveDataRow>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="826,832" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="827,832" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                         <ui:CommentOut.Body>
                           <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="418,754" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <sap:WorkflowViewStateService.ViewState>
@@ -1206,7 +1347,7 @@
             </Sequence>
           </TryCatch.Try>
           <TryCatch.Catches>
-            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="948,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="949,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1217,7 +1358,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                 </ActivityAction.Argument>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[exception.Message+ &quot;at&quot; + exception.Source]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[exception.Message+ &quot;at&quot; + exception.Source]" />
               </ActivityAction>
             </Catch>
           </TryCatch.Catches>
@@ -1228,10 +1369,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">400,7</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:Size x:Key="ShapeSize">200,68</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="학번 별 기준파일 인덱스 추출" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
+      <Sequence DisplayName="학번 별 기준파일 인덱스 추출" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_27">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="studentNum_STR" />
           <Variable x:TypeArguments="x:String" Name="groub_STR" />
