@@ -237,7 +237,7 @@
               <av:Size x:Key="ShapeSize">200,66</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="학번 별 기준파일 인덱스 추출" sap:VirtualizedContainerService.HintSize="1655,6285" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence DisplayName="학번 별 기준파일 인덱스 추출" sap:VirtualizedContainerService.HintSize="1655,6284" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="studentNum_STR" />
               <Variable x:TypeArguments="x:String" Name="groub_STR" />
@@ -701,7 +701,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ForEach x:TypeArguments="sd:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="654,1211" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[{standardDT2, standardDT3, standardDT4, standardDT5, standardDT6}]">
+                                            <ui:ForEach x:TypeArguments="sd:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each - standardDT2 ~ 6 까지 반복" sap:VirtualizedContainerService.HintSize="654,1211" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[{standardDT2, standardDT3, standardDT4, standardDT5, standardDT6}]">
                                               <ui:ForEach.Body>
                                                 <ActivityAction x:TypeArguments="sd:DataTable">
                                                   <ActivityAction.Argument>
@@ -717,7 +717,7 @@
                                                       <ui:ForEachRow.Body>
                                                         <ActivityAction x:TypeArguments="sd:DataRow">
                                                           <ActivityAction.Argument>
-                                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_standardDT2" />
+                                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_standardDT" />
                                                           </ActivityAction.Argument>
                                                           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,837" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                                             <Sequence.Variables>
@@ -728,7 +728,7 @@
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <If sap2010:Annotation.AnnotationText="위에 for each에서 내려온 교과목을 기준서 파일에 비교하고, 위치를 찾은 후 해당 위치에 대응하는 테이블 헤더를 찾아냄" Condition="[row_standardDT2.ItemArray.Contains(row_inputDT2Filtered(2))]" DisplayName="If - 해당 교과목에 대한 인덱스와 칼럼을 가져오기" sap:VirtualizedContainerService.HintSize="484,745" sap2010:WorkflowViewState.IdRef="If_28">
+                                                            <If sap2010:Annotation.AnnotationText="위에 for each에서 내려온 교과목을 기준서 파일에 비교하고, 위치를 찾은 후 해당 위치에 대응하는 테이블 헤더를 찾아냄" Condition="[row_standardDT.ItemArray.Contains(row_inputDT2Filtered(2))]" DisplayName="If - 해당 교과목에 대한 인덱스와 칼럼을 가져오기" sap:VirtualizedContainerService.HintSize="484,745" sap2010:WorkflowViewState.IdRef="If_28">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -753,7 +753,7 @@
                                                                       <OutArgument x:TypeArguments="x:Int32">[index_Arr]</OutArgument>
                                                                     </Assign.To>
                                                                     <Assign.Value>
-                                                                      <InArgument x:TypeArguments="x:Int32">[Array.IndexOf(row_standardDT2.ItemArray, Convert.ToString(row_inputDT2Filtered(2)))]</InArgument>
+                                                                      <InArgument x:TypeArguments="x:Int32">[Array.IndexOf(row_standardDT.ItemArray, Convert.ToString(row_inputDT2Filtered(2)))]</InArgument>
                                                                     </Assign.Value>
                                                                   </Assign>
                                                                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_33" Text="[index_Arr.ToString+&quot; 인덱스 찾기&quot;]" />
@@ -804,7 +804,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1535,62" sap2010:WorkflowViewState.IdRef="WriteLine_32" Text="inputdt1 for each 끝" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1613,61" sap2010:WorkflowViewState.IdRef="WriteLine_32" Text="inputdt1 for each 끝" />
           </Sequence>
         </FlowStep>
       </FlowStep.Next>
